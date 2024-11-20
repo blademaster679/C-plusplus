@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(Lab08LinkedList)
+set(CMAKE_C_COMPILER "C:\\mingw64\\bin")
+set(CMAKE_CXX_COMPILER "C:\\mingw64\\bin")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/buildlab08")
+include_directories(${CMAKE_SOURCE_DIR})
+add_executable(lab08linked_list lab08linked_list.cpp)
