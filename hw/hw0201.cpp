@@ -7,32 +7,32 @@ vector<string> one_word = {"","one","two","three","four","five","six","seven","e
                            "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
 vector<string> ten_word = {"","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};
 
-string NumToWord(int num , string suffix){
-    if (num == 0) {
+string nToWord(int n , string suffix){
+    if (n == 0) {
         return "";
-    }else if(num > 0 && num < 20){
-        return one_word[num] + " " + suffix;
-    }else if(num >= 20 && num < 100){
-        return ten_word[num/10] + "-" + one_word[num%10] + suffix;
+    }else if(n > 0 && n < 20){
+        return one_word[n] + " " + suffix;
+    }else if(n >= 20 && n < 100){
+        return ten_word[n/10] + "-" + one_word[n%10] + suffix;
     }else{
-        return one_word[num/100] + " hundred " + NumToWord(num%100 , "") + " " + suffix;
+        return one_word[n/100] + " hundred " + nToWord(n%100 , "") + " " + suffix;
     }
 }
 
-string ConvertToNum(long long num){
-    if(num == 0){
+string ConvertTon(long long n){
+    if(n == 0){
         return "zero";
     }
     string results = "";
-    if(num < 0){
+    if(n < 0){
         results += "negative ";
-        num = -num;
+        n = -n;
     }
-    results += NumToWord(num/1000000000 , "billion ");
-    results += NumToWord((num/1000000)%1000 , "million ");
-    results += NumToWord((num/1000)%1000 , "thousand ");
-    results += NumToWord((num/100)%10 , "hundred ");
-    results += NumToWord(num%100 , "");
+    results += nToWord(n/1000000000 , "billion ");
+    results += nToWord((n/1000000)%1000 , "million ");
+    results += nToWord((n/1000)%1000 , "thousand ");
+    results += nToWord((n/100)%10 , "hundred ");
+    results += nToWord(n%100 , "");
     // check and remove the last space and dash
     while (results.back() == ' ') {
         results.pop_back();
@@ -45,8 +45,8 @@ string ConvertToNum(long long num){
 }
 
 int main(){
-    long long num;
-    cin >> num;
-    cout << ConvertToNum(num) << endl;
+    long long n;
+    cin >> n;
+    cout << ConvertTon(n) << endl;
     return 0;
 }
