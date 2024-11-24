@@ -40,7 +40,8 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "cstring": "cpp"
     },
     "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
     "cmake.generator": "MinGW Makefiles", // 或 "Ninja" 等其他生成器
