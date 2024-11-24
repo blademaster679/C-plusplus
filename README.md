@@ -10,7 +10,6 @@
 .useful_model 一些有用的模型
 **下面是目录：**
 **assignment:**
-<font size="5" color="blue">这是一个蓝色大字体的文本</font>
 assignment2: 计算球的体积和面积
 assignment21: 计算两点之间的距离
 **homework project:**
