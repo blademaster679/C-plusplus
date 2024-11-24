@@ -8,17 +8,17 @@
 - .lesson_test 课堂上的一些测试
 - .useful_model 一些有用的模型
 ### 下面是目录：
-- **assignment:**
+1. **assignment:**
 - assignment2: 计算球的体积和面积
 - assignment21: 计算两点之间的距离
-- **homework project:**
+2. **homework project:**
 - hw0101: 多项式的乘法
 - hw0102: 3阶幻方随机缺失3个数的补全
 - hw0103: 流言的传播模型
 - hw0201: 阿拉伯大数字转换为英语大数字读法（存在两个问题）
 - hw0201gpt: hw0201中的两个bug用gpt修复版
 - hw0202: 英语大数字读法转换为阿拉伯大数字
-- **lab homework:**
+3. **lab homework:**
 - lab0201: 判断奇偶性
 - lab0202: 阶乘的循环算法
 - lab0202test: 阶乘的循环算法
@@ -38,7 +38,7 @@
 - lab1001: 反转链表
 - lab1002: 队列的简单变换和查询
 - lab_head: 链表中特定链节的搜索和删除（Linux系统内运行cmake即可）
-- **lesson_test:**
+4. **lesson_test:**
 - lesson9_19: 比较两个字符串
 - test2: 输入输出
 - test3: 简单的输出
@@ -54,7 +54,7 @@
 - test10_29: fstream，输入输出的功能测试
 - test11_01: string字符串的加和
 - test11_07: 函数传入array以地址形式的验证
-- **useful_model:**
+5. **useful_model:**
 - 2D_array: 使用array创建二维矩阵（指针和new的使用）
 - array: char的正确使用（加入'\0'）
 - caesar: 凯撒密码加密和解密
