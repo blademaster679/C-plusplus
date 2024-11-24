@@ -36,7 +36,7 @@ vector<vector<int>> permute(vector<int> vec){
 }
 
 int main(){
-    vector<int> vec = {1,2,3,};
+    vector<int> vec = {1,2,3};
     vector<vector<int>> results = permute(vec);
     //vector<vector<int>> p = {{1,2,3},{1,3,2},{2,1,3},{2,3,1},{3,1,2},{3,2,1}};
     print(results);
