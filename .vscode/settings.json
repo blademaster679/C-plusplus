@@ -48,5 +48,40 @@
     "cmake.configureArgs": [
         "-DCMAKE_C_COMPILER:FILEPATH=C:\\mingw64\\bin",
         "-DCMAKE_CXX_COMPILER:FILEPATH=C:\\mingw64\\bin"
-    ]
+    ],
+    // "background.editor": {
+    //   "useFront": false,
+    //   "style": {
+    //     "background-position": "100% 100%",
+    //     "background-size": "auto",
+    //     "opacity": 0.6
+    //   },
+    //   "styles": [{}, {}, {}],
+    //   // 本地图片可以拖到浏览器中，快速从地址栏得到file协议的地址
+    //   "images": ["file:///E:/code/9E015B60F0FFA7E8384732F182CB4F7C.jpg"],
+    //   // "interval": 0,
+    //   "random": false
+    // },
+    "background.fullscreen": {
+        // 本地图片可以拖到浏览器中，快速从地址栏得到file协议的地址
+        "images": ["file:///E:/code/9E015B60F0FFA7E8384732F182CB4F7C.jpg"],
+        "opacity": 0.1,
+        "size": "cover",
+        "position": "center",
+        "interval": 0,
+        "random": false
+      },
+      // `sidebar`、`panel` 的配置与 `fullscreen` 一致
+      "background.sidebar": {"images": ["file:///E:/code/firefly_morning.jpg"],
+        "opacity": 0.3,
+        "size": "cover",
+        "position": "center",
+        "interval": 0,
+        "random": false},
+      "background.panel": {"images": ["file:///E:/code/firefly1.jpg"],
+        "opacity": 0.4,
+        "size": "cover",
+        "position": "center",
+        "interval": 0,
+        "random": false}
 }
