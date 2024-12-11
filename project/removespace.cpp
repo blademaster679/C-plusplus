@@ -5,7 +5,7 @@
 #include <string>
 #include <algorithm>
 #include <cctype>
-// Function to remove spaces from a string
+// 函数 trim 用于去除字符串两端的空格
 std::string trim(const std::string &str)
 {
     auto start = str.begin();
