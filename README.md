@@ -7,6 +7,10 @@
 - .lab_head OJ系统上第八次作业的失败版（windows上使用cmake操作复杂）
 - .lesson_test 课堂上的一些测试
 - .useful_model 一些有用的模型
+- .project C++project的文件，实现了简单的数据库功能
+
+---
+
 ### 下面是目录：
 1. **assignment:**
 - assignment2: 计算球的体积和面积
@@ -67,3 +71,23 @@
 - stringtoint: string字符串对输入的处理
 - swap: 函数模板交换不同类型的数据（动态多态）
 - while: 猜数字小游戏
+6. **project:**
+- data_manager.cpp: 实现数据库主要功能的核心文件
+- data_manager.hpp: 对cpp文件中的函数进行声明
+- main.cpp: 对输入的sql文件进行解析并调用对应的函数
+- removespace.cpp: 用于处理字符串前后空格
+- removespace.hpp: 用于对trim函数的定义
+- minidb.exe: minidb的可运行程序
+- output.csv: 测试时输出的文件
+- test_university.txt: 测试时输出的数据库文件
+- university_db.txt: 测试时输出的数据库文件
+- test0.sql: 测试的sql文件
+- test1.sql: 测试的sql文件
+7. **ref_minidb:**
+- minidb.cpp: 参考的minidb文件，集合所有代码为一身
+- minidb.exe: minidb的可运行程序
+- output.csv: 测试时输出的文件
+- test_university.txt: 测试时输出的数据库文件
+- university_db.txt: 测试时输出的数据库文件
+- test0.sql: 测试的sql文件
+- test1.sql: 测试的sql文件
