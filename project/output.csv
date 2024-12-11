@@ -1,0 +1,18 @@
+ID,Name,GPA,Major
+1000,'Jay Chou',3.00,'Microelectronics'
+1001,'Taylor Swift',3.20,'Data Science'
+1002,'Bob Dylan',3.50,'Financial Technology'
+---
+'Taylor Swift',3.20
+'Bob Dylan',3.50
+---
+ID,Name,GPA,Major
+1001,'Taylor Swift',3.80,'Data Science'
+1002,'Bob Dylan',3.50,'Financial Technology'
+---
+student.Name,course_enrollment.Course
+'Taylor Swift','Data Science'
+'Taylor Swift','Machine Learning'
+'Bob Dylan','Financial Technology'
+'Bob Dylan','Advanced Algorithms'
+---
