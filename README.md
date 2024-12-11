@@ -8,7 +8,7 @@
 - .lesson_test 课堂上的一些测试
 - .useful_model 一些有用的模型
 - .project C++project的文件，实现了简单的数据库功能
-
+- .ref_minidb C++project参考的文件
 ---
 
 ### 下面是目录：
