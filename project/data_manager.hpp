@@ -26,7 +26,7 @@ public:
     std::vector<Record> records;
     Table() = default;
     Table(const std::string &tableName) : name(tableName) {}
-    void addColumn(const std::string &columnName, const std::string &columnType);
+    void addColumns(const std::string &columnName, const std::string &columnType);
 };
 class Database
 {

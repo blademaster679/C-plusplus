@@ -1,14 +1,24 @@
 #include <iostream>
 #include <string>
 #include "removespace.hpp"
+#include <numeric>
+#include <string>
+#include <algorithm>
+#include <cctype>
 // Function to remove spaces from a string
-std::string removeSpaces(const std::string& str) {
-    std::string result;
-    result.reserve(str.size());
-    for (char c : str) {
-        if (!std::isspace(static_cast<unsigned char>(c))) {
-            result += c;
-        }
+std::string trim(const std::string &str)
+{
+    auto start = str.begin();
+    while (start != str.end() && std::isspace(*start))
+    {
+        start++;
     }
-    return result;
+
+    auto end = str.end();
+    do
+    {
+        end--;
+    } while (std::distance(start, end) > 0 && std::isspace(*end));
+
+    return std::string(start, end + 1);
 }

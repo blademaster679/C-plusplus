@@ -3,6 +3,6 @@
 
 #include <string>
 
-std::string removeSpaces(const std::string &str);
+std::string trim(const std::string &str);
 
 #endif // REMOVESPACE_HPP

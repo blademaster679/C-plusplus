@@ -1,18 +1,34 @@
 ID,Name,GPA,Major
-1000,'Jay Chou',3.00,'Microelectronics'
-1001,'Taylor Swift',3.20,'Data Science'
-1002,'Bob Dylan',3.50,'Financial Technology'
+1,'Alice Johnson',3.50,'Computer Science'
+2,'Bob Smith',3.60,'Electrical Engineering'
+3,'Catherine Lee',3.90,'Mathematics'
+4,'Dave Brown',3.20,'Physics'
+5,'Eva White',3.80,'Chemistry'
 ---
-'Taylor Swift',3.20
-'Bob Dylan',3.50
+CourseID,CourseName,Department
+101,'Introduction to Computer Science','Computer Science'
+102,'Circuit Analysis','Electrical Engineering'
+103,'Linear Algebra','Mathematics'
+104,'Quantum Mechanics','Physics'
+105,'Organic Chemistry','Chemistry'
+---
+student.Name,enrollment.CourseID
+'Alice Johnson',101
+'Alice Johnson',103
 ---
 ID,Name,GPA,Major
-1001,'Taylor Swift',3.80,'Data Science'
-1002,'Bob Dylan',3.50,'Financial Technology'
+1,'Alice Johnson',4.00,'Computer Science'
 ---
-student.Name,course_enrollment.Course
-'Taylor Swift','Data Science'
-'Taylor Swift','Machine Learning'
-'Bob Dylan','Financial Technology'
-'Bob Dylan','Advanced Algorithms'
+student.Name,enrollment.CourseID
+'Alice Johnson',101
+'Alice Johnson',103
+'Bob Smith',102
+'Catherine Lee',103
+'Eva White',105
+---
+CourseID,CourseName,Department
+101,'Introduction to Computer Science','Computer Science'
+102,'Circuit Analysis','Electrical Engineering'
+103,'Linear Algebra','Mathematics'
+105,'Organic Chemistry','Chemistry'
 ---
