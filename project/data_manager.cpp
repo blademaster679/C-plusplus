@@ -60,7 +60,7 @@ void MiniDB::createTable(const std::string &command)
 {
 
     const std::string keyword = "CREATE TABLE";
-    if (command.find(keyword) != 0)
+    if (command.find(keyword) != 0) // 如果命令不是以 "CREATE TABLE" 开头，则输出错误信息，此处的0表示索引从0开始
     {
         std::cout << "Invalid command. Expected 'CREATE TABLE'." << std::endl;
         return;
@@ -141,7 +141,7 @@ void MiniDB::dropTable(const std::string &tableName)
         return;
     }
 
-    if (currentDatabase->tables.erase(tableName) == 0)
+    if (currentDatabase->tables.erase(tableName) == 0)//0代表找到并删除了0个表，erase函数返回的是删除的表的数量
     {
         std::cout << "Table [" << tableName << "] does not exist." << std::endl;
         return;
@@ -168,13 +168,13 @@ void MiniDB::loadDatabase(const std::string &DBname)
         if (line.empty())
             continue;
 
-        if (line.rfind("TABLE", 0) == 0)
+        if (line.rfind("TABLE", 0) == 0)//rfind的第二个参数是从哪个位置开始查找，0表示从头开始查找，如果返回值为0，表示TABLE是第一个字符
         {
             std::string tableName = trim(line.substr(6));
             loadedDb.tables[tableName] = Table(tableName);
             currentTable = &loadedDb.tables[tableName];
         }
-        else if (currentTable && line.find(')') == std::string::npos)
+        else if (currentTable && line.find(')') == std::string::npos)//确保不是结束行
         {
             std::istringstream iss(line);
             std::string columnName, columnType;
@@ -216,7 +216,7 @@ void MiniDB::saveDatabase(const std::string &DBname)
     auto &db = databases[DBname];
     dbFile << "CREATE DATABASE " << DBname << ";" << std::endl;
     //遍历表
-    for (const auto &tablePair : db.tables)
+    for (const auto &tablePair : db.tables)//tablePair是一个pair，first是表名，second是表
     {
         const Table &table = tablePair.second;
         dbFile << "CREATE TABLE " << table.name << ";" << std::endl;
@@ -257,7 +257,7 @@ void MiniDB::insertIntoTable(const std::string &command, const std::string &tabl
     }
 
     size_t valuesStart = command.find("VALUES") + 6;
-    size_t valuesEnd = command.find(';', valuesStart);
+    size_t valuesEnd = command.find(';', valuesStart);//valueStart是VALUES的位置，这里代表从valueStart开始找，valuesEnd是分号的位置
     if (valuesStart == std::string::npos || valuesEnd == std::string::npos)
     {
         std::cerr << "Invalid command." << std::endl;
@@ -271,25 +271,25 @@ void MiniDB::insertIntoTable(const std::string &command, const std::string &tabl
         std::cerr << "Invalid command." << std::endl;
         return;
     }
-    valuepart = valuepart.substr(1, valuepart.size() - 2);
+    valuepart = valuepart.substr(1, valuepart.size() - 2);//去掉括号
 
     std::vector<std::string> localValues;
     size_t start = 0, end;
     while ((end = valuepart.find(',', start)) != std::string::npos)
     {
-        localValues.push_back(trim(valuepart.substr(start, end - start)));
+        localValues.push_back(trim(valuepart.substr(start, end - start)));//将每个值加入
         start = end + 1;
     }
-    localValues.push_back(trim(valuepart.substr(start)));
+    localValues.push_back(trim(valuepart.substr(start)));//将最后一个值加入
 
     auto &table = currentDatabase->tables[tableName];
-    if (localValues.size() != table.columns.size())
+    if (localValues.size() != table.columns.size())//检查值的数量是否和列的数量相等
     {
         std::cerr << "Error: Number of values does not match number of columns." << std::endl;
         return;
     }
 
-    Record newRecord;
+    Record newRecord;//新建一个记录，不使用原来的记录是因为原来的记录可能会被修改
     bool valid = true;
     for (size_t i = 0; i < table.columns.size(); i++)
     {
@@ -402,11 +402,11 @@ void MiniDB::select(const std::string &tableName, std::vector<std::string> &colu
                     getline(iss, value);
                     if (value.front() == ' ')
                         value = value.substr(1);
-                    if (value.front() == '\'' && value.back() == '\'')
+                    if (value.front() == '\'' && value.back() == '\'')//去掉单引号
                     {
                         value = value.substr(1, value.length() - 2);
                     }
-                    conditions.emplace_back(columnName, make_pair(op, value));
+                    conditions.emplace_back(columnName, make_pair(op, value));//emplace_back是在vector的末尾添加一个元素，避免了拷贝
                 }
             }
         }
@@ -535,7 +535,7 @@ void MiniDB::innerJoin(const std::string &tableName1, const std::string &tableNa
     }
     std::cout << "---" << std::endl;
 }
-// 函数 evaluateCondition 用于评估条件
+// 函数 update 用于更新记录
 void MiniDB::update(const std::string &tableName, const std::string &setclause, const std::string &whereClause)
 {
     if (currentDatabase == nullptr)
