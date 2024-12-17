@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         cout << "File not found" << endl;
         return 0;
     }
-    streambuf *coutbuf = cout.rdbuf();
+    streambuf *coutbuf = cout.rdbuf();//保存cout的缓冲区的指针
     cout.rdbuf(output.rdbuf());
     while (getline(inputFile, command))
     {
