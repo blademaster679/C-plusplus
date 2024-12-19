@@ -9,6 +9,7 @@
 - .useful_model 一些有用的模型
 - .project C++project的文件，实现了简单的数据库功能
 - .ref_minidb C++project参考的文件
+- .random_test 为了验证一些功能的草稿
 ---
 
 ### 下面是目录：
@@ -91,3 +92,5 @@
 - university_db.txt: 测试时输出的数据库文件
 - test0.sql: 测试的sql文件
 - test1.sql: 测试的sql文件
+8. **random_test:**
+- test12_19.cpp: 区分i++和++i
