@@ -102,3 +102,4 @@
 - test1.sql: 测试的sql文件
 8. **random_test:**
 - test12_19.cpp: 区分i++和++i
+- test01_08.cpp: 关于宏的运算顺序问题
