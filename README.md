@@ -103,3 +103,4 @@
 8. **random_test:**
 - test12_19.cpp: 区分i++和++i
 - test01_08.cpp: 关于宏的运算顺序问题
+- test01_27.cpp: c语言的随便测试
