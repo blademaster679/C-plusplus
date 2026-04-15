@@ -86,5 +86,7 @@
         "size": "cover",
         "position": "center",
         "interval": 0,
-        "random": false}
+        "random": false},
+
+    //"terminal.integrated.shellIntegration.enabled": false //临时加入，等稳定版本再删除 (已修复终端无限刷新enter的bug)
 }
